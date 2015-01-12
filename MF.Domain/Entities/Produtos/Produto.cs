@@ -17,8 +17,15 @@ namespace MF.Domain.Entities
         public int IdProduto { get; set; }
         public string Descricao { get; set; }
         public string Sigla { get; set; }
+        public int IdUnidade { get; set; }
+        public int ValorUnitario { get; set; }
+        public int EstoqueMinimo { get; set; }
+        public int QtdEstoque { get; set; }
+        public bool FlgAtivo { get; set; }
         public System.DateTime DtCadastro { get; set; }
         public string UsuCadatro { get; set; }
+        public System.DateTime DtAlteracao { get; set; }
+        public string UsuAlteracao { get; set; }
 
         /*
         ValorUnitario

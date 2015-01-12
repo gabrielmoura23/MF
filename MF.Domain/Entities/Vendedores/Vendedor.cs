@@ -18,7 +18,8 @@ namespace MF.Domain.Entities
         public string Cpf { get; set; }
         public System.DateTime DtCadastro { get; set; }
         public string UsuCadatro { get; set; }
-
+        public DateTime DtAlteracao { get; set; }
+        public string UsuAlteracao { get; set; }
 
         public ValidationResult ResultadoValidacao { get; private set; }
         public bool IsValid()
