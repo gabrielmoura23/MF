@@ -6,19 +6,17 @@ using System.Threading.Tasks;
 
 namespace MF.Domain.Entities
 {
-    public class Venda
+    class Pessoa
     {
     }
 
     /*
-     * CodVenda
-     * 
-       CodEmpresa  
-       CodCliente
-        DtVenda
+     * CodPessoa
      
-     * 
-     * 
-     * 
+     nome
+     cpf
+     renda
+     email
+     
      * */
 }

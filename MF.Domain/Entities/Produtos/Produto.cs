@@ -20,6 +20,12 @@ namespace MF.Domain.Entities
         public System.DateTime DtCadastro { get; set; }
         public string UsuCadatro { get; set; }
 
+        /*
+        ValorUnitario
+        unidade
+        EstoqueMinimo
+        QtdEstoque
+        */
 
         public ValidationResult ResultadoValidacao { get; private set; }
         public bool IsValid()
