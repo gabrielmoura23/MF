@@ -10,13 +10,17 @@ namespace MF.Domain.Entities
     {
         public DetalheVenda() 
         { }
-        
+
+        public int IdDetalheVenda { get; set; }
         public int IdVenda { get; set; }
         public int IdProduto { get; set; }
         public int QtdProduto { get; set; }
-        public DateTime DtCadastro { get; set; }
+        public System.DateTime DtCadastro { get; set; }
         public string UsuCadastro { get; set; }
-        public DateTime DtAlteracao { get; set; }
+        public Nullable<System.DateTime> DtAlteracao { get; set; }
         public string UsuAlteracao { get; set; }
+
+        public virtual Venda Venda { get; set; }
+        public virtual Produto Produto { get; set; }
     }
 }

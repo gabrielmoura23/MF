@@ -54,6 +54,7 @@
     <Compile Include="Context\ContextManager.cs" />
     <Compile Include="Context\MFContext.cs" />
     <Compile Include="EntityConfig\VendedorConfiguration.cs" />
+    <Compile Include="EntityConfig\VendaConfiguration.cs" />
     <Compile Include="EntityConfig\ProdutoConfiguration.cs" />
     <Compile Include="Interface\IContextManager.cs" />
     <Compile Include="Interface\IDbContext.cs" />

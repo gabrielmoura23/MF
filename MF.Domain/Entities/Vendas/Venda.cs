@@ -9,30 +9,23 @@ namespace MF.Domain.Entities
     public class Venda
     {
         public Venda()
-        { }
-
+        {
+            this.DetalheVenda = new List<DetalheVenda>();
+        }
 
         public int IdVenda { get; set; }
-        public string IdEmpresa { get; set; }
-        public DateTime DtVenda { get; set; }
+        public int IdEmpresa { get; set; }
+        public int IdVendedor { get; set; }
         public int IdFormaDePagamento { get; set; }
-        public int CodVendedor { get; set; }
-        
-        public DateTime DtCadastro { get; set; }
+        public System.DateTime DtVenda { get; set; }
+        public System.DateTime DtCadastro { get; set; }
         public string UsuCadastro { get; set; }
-        public DateTime DtAlteracao { get; set; }
+        public Nullable<System.DateTime> DtAlteracao { get; set; }
         public string UsuAlteracao { get; set; }
-    }
 
-    /*
-     * CodVenda
-     * 
-       CodEmpresa  
-       CodCliente
-        DtVenda
-     
-     * 
-     * 
-     * 
-     * */
+        public virtual Empresa Empresa { get; set; }
+        public virtual Vendedor Vendedor { get; set; }
+        public virtual FormaDePagamento FormaDePagamento { get; set; }
+        public virtual ICollection<DetalheVenda> DetalheVenda { get; set; }
+    }
 }

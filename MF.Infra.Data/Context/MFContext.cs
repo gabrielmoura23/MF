@@ -40,7 +40,7 @@ namespace MF.Infra.Data.Context
             
             // ModelConfiguration
             modelBuilder.Configurations.Add(new ProdutoConfiguration());
-            modelBuilder.Configurations.Add(new VendedorConfiguration());
+            modelBuilder.Configurations.Add(new VendaConfiguration());
             //modelBuilder.Configurations.Add(new EmpresaConfiguration());
 
             base.OnModelCreating(modelBuilder);

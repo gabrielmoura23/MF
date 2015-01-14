@@ -9,22 +9,29 @@ namespace MF.Infra.Data.EntityConfig
         {
             HasKey(c => c.IdVendedor);
 
-            Property(c => c.NomeCompleto)
+            Property(c => c.FlgPrivilegiado)
+                .IsRequired();
+
+            Property(c => c.FlgAtivo)
+                .IsRequired();
+            
+            Property(c => c.MotivoDesabilitado)
+                .HasMaxLength(200);
+
+            Property(c => c.UsuCadastro)
                 .IsRequired()
-                .HasMaxLength(150);
+                .HasMaxLength(200);
 
-            Property(c => c.Cpf)
-                .IsRequired()
-                .HasMaxLength(20);
+            Property(t => t.UsuAlteracao)
+                .HasMaxLength(200);
 
-            //Property(c => c.Email)
-            //    .IsRequired();
+            Ignore(t => t.ResultadoValidacao);
 
-            //Ignore(t => t.ResultadoValidacao);
-
-            //Property(c => c.CPF)
-            //    .IsRequired()
-            //    .HasMaxLength(11);
+            // Relationships
+            this.HasRequired(t => t.Pessoa)
+                .WithMany(t => t.Vendedor)
+                .HasForeignKey(d => d.IdPessoa);
+        
         }
     }
 }

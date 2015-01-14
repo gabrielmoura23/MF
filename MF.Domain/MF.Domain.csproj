@@ -39,14 +39,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Empresas\StatusEmpresa.cs" />
+    <Compile Include="Entities\Empresas\EmpresaFilialContato.cs" />
+    <Compile Include="Entities\Empresas\EmpresaContato.cs" />
     <Compile Include="Entities\Vendas\DetalheVenda.cs" />
     <Compile Include="Entities\Empresas\EmpresaFilial.cs" />
-    <Compile Include="Entities\Grupos\Grupo.cs" />
     <Compile Include="Entities\Produtos\TipoUnidade.cs" />
     <Compile Include="Entities\Usuarios\Pessoa.cs" />
     <Compile Include="Entities\Produtos\TipoProduto.cs" />
     <Compile Include="Entities\Usuarios\UsuarioExterno.cs" />
-    <Compile Include="Entities\Usuarios\UsuarioGrupo.cs" />
     <Compile Include="Entities\Usuarios\UsuarioExternoEmpresa.cs" />
     <Compile Include="Entities\Vendas\FormaDePagamento.cs" />
     <Compile Include="Entities\Geografico\Cidade.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="Entities\Usuarios\Usuario.cs" />
     <Compile Include="Entities\Vendas\Venda.cs" />
     <Compile Include="Entities\Vendedores\Vendedor.cs" />
+    <Compile Include="Enums\EnumsWeb.cs" />
     <Compile Include="Interfaces\Repository\IVendedorRepository.cs" />
     <Compile Include="Interfaces\Repository\IProdutoRepository.cs" />
     <Compile Include="Interfaces\Repository\IRepositoryBase.cs" />
@@ -80,7 +82,12 @@
     <Compile Include="ValueObjects\ValidationResult.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Entities\Grupos\" />
+    <Folder Include="Specification\Empresas\" />
+    <Folder Include="Specification\Vendas\" />
     <Folder Include="Specification\Vendedores\" />
+    <Folder Include="Validation\Empresas\" />
+    <Folder Include="Validation\Vendas\" />
     <Folder Include="Validation\Vendedores\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

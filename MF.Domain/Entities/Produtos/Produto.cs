@@ -12,27 +12,26 @@ namespace MF.Domain.Entities
     {
         public Produto()
         {
+            this.DetalheVenda = new List<DetalheVenda>();
         }
 
         public int IdProduto { get; set; }
         public string Descricao { get; set; }
         public string Sigla { get; set; }
-        public int IdUnidade { get; set; }
+        public int IdTipoProduto { get; set; }
+        public int IdTipoUnidade { get; set; }
         public int ValorUnitario { get; set; }
-        public int EstoqueMinimo { get; set; }
+        public int QtdEstoqueMinimo { get; set; }
         public int QtdEstoque { get; set; }
         public bool FlgAtivo { get; set; }
         public System.DateTime DtCadastro { get; set; }
-        public string UsuCadatro { get; set; }
-        public System.DateTime DtAlteracao { get; set; }
+        public string UsuCadastro { get; set; }
+        public Nullable<System.DateTime> DtAlteracao { get; set; }
         public string UsuAlteracao { get; set; }
 
-        /*
-        ValorUnitario
-        unidade
-        EstoqueMinimo
-        QtdEstoque
-        */
+        public virtual TipoProduto TipoProduto { get; set; }
+        public virtual TipoUnidade TipoUnidade { get; set; }
+        public virtual ICollection<DetalheVenda> DetalheVenda { get; set; }
 
         public ValidationResult ResultadoValidacao { get; private set; }
         public bool IsValid()

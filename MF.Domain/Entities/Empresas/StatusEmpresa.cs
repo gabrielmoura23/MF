@@ -6,19 +6,21 @@ using System.Threading.Tasks;
 
 namespace MF.Domain.Entities
 {
-    public class TipoUnidade
+    public class StatusEmpresa
     {
-        public TipoUnidade()
+        public StatusEmpresa()
         {
-            this.Produto = new List<Produto>();
+            this.Empresa = new List<Empresa>();
         }
 
-        public int IdTipoUnidade { get; set; }
+        // Ativa, Pendente, Com Atraso, Encerrada, Etc...
+
+        public int IdStatusEmpresa { get; set; }
         public string Descricao { get; set; }
         public bool FlgAtivo { get; set; }
         public System.DateTime DtCadastro { get; set; }
         public string UsuCadastro { get; set; }
 
-        public virtual ICollection<Produto> Produto { get; set; }
+        public virtual ICollection<Empresa> Empresa { get; set; }
     }
 }
