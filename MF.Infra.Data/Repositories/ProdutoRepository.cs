@@ -9,6 +9,7 @@ namespace MF.Infra.Data.Repositories
     {
         public IEnumerable<Produto> BuscarPorNome(string nome)
         {
+            var b = 1;
             return base.Find(c => c.Descricao == nome);
         }
     }
